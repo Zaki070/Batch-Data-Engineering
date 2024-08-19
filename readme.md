@@ -1,13 +1,6 @@
 # Batch-Data-Engineering-Project
-The task is to build a data pipeline to populate the user_behavior_metric table. The user_behavior_metric table is an OLAP table, meant to be used by analysts, 
-dashboard software, etc. It is built from user_purchase, an OLTP table with user purchase information and movie_review.csv, data sent every day by an external data vendor.
+The goal is to construct a data pipeline that populates the user_behavior_metric table. This table is an OLAP table designed for use by analysts, dashboard applications, and similar tools. The data for this table is derived from the user_purchase table, which is an OLTP table containing user purchase information, and from movie_review.csv, a daily data file provided by an external vendor.
 ![Project Table](https://github.com/Alero-Awani/Batch-data-engineering-project/blob/master/images/de_proj_obj.png?raw=true)
-
-# REFERENCE
-https://www.startdataengineering.com/post/data-engineering-project-for-beginners-batch-edition/
-
-# Architecture
-![Pipeline Architecture](https://github.com/Alero-Awani/Batch-data-engineering-project/blob/master/images/de_proj_design.png?raw=true)
 
 # Table of contents
 1. [Pipeline Workflow](#Pipeline)
