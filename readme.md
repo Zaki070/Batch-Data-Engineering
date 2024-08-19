@@ -10,17 +10,13 @@ The goal is to construct a data pipeline that populates the user_behavior_metric
 
 ## Pipeline Workflow <a name="Pipeline"></a>
 ### User Purchase Data
-* The user purchase data is extracted from an OLTP database and loaded into the Redshift data warehouse.
-* AWS S3 is used as storage for use with AWS Redshift Spectrum(data lakehouse)
-* With Redshift Spectrum the data can be queried directly from s3 on Redshift by creating an external schema with the help of AWS Glue.
+* The user purchase data is extracted from an OLTP database and ingested into the Redshift data warehouse. AWS S3 serves as the storage solution, enabling integration with AWS Redshift Spectrum for a data lakehouse approach. By utilizing Redshift Spectrum, data can be queried directly from S3 on Redshift through the creation of an external schema, facilitated by AWS Glue.
 
 ### Movie Review Data
-* The movie review data is loaded into a staging area in an s3 bucket  where it can be directly accessed by AWS EMR.
-* The data is loaded along side a spark script
-* The spark script performs basic text classification on the data and loads it back to the s3 bucket
+* The movie review data is initially loaded into a staging area within an S3 bucket, where it becomes accessible to AWS EMR. Alongside this data, a Spark script is executed to perform basic text classification. After processing, the classified data is stored back into the S3 bucket.
 
 ### User Behaviour Metric Table
-* The transformed movie review data and the user_purchase data are joined in Redshift to get the user_behaviour metric table
+* In Redshift, the processed movie review data is combined with the user purchase data to generate the user_behavior_metric table. This table provides valuable insights by merging these two data sources.
 
 ## Terraform setup <a name="Terraform"></a>
 ![Terraform Plan](https://github.com/Alero-Awani/Batch-data-engineering-project/blob/master/images/terraform_visual.png?raw=true)
