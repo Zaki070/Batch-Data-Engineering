@@ -1,4 +1,4 @@
-# Batch-Data-Engineering-Project
+# Batch-Data-Engineering
 The goal is to construct a data pipeline that populates the user_behavior_metric table. This table is an OLAP table designed for use by analysts, dashboard applications, and similar tools. The data for this table is derived from the user_purchase table, which is an OLTP table containing user purchase information, and from movie_review.csv, a daily data file provided by an external vendor.
 ![Project Table](https://github.com/Alero-Awani/Batch-data-engineering-project/blob/master/images/de_proj_obj.png?raw=true)
 
